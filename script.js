@@ -44,7 +44,7 @@ function generatePassword() {
   }
 
   //Ask about uppercase
-  var upperCasePW = window.confirm("Uppercase?");
+  var upperCasePW = window.confirm("Do you want to include Uppercase character(s)?");
   if (upperCasePW===true) {
     var upperCasePW = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   }
@@ -54,8 +54,8 @@ function generatePassword() {
     console.log(upperCasePW);
   }
 
-  
-  var numericType = window.confirm("Include numbers?");
+  //Ask about numbers
+  var numericType = window.confirm("Do you want to include number(s)?");
 
   if (numericType===true) {
     var numericType = "1234567890";
@@ -65,9 +65,9 @@ function generatePassword() {
 
   }
   
+  //combines all characters that user wants to include
   var combinedCharacters = characterType + numericType + lowerCasePW + upperCasePW;
 
-  // console.log(characterTypes);
 
   passwordfinal = "";
  for (var i=0; i < passwordLength; i++) {
