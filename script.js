@@ -17,8 +17,8 @@ function writePassword() {
 
 function generatePassword() {
   //Choose length of characters
-    var passwordLength = window.prompt("Enter a character length between 8 and 12.");
-    if (passwordLength < 8 || passwordLength > 12) {
+    var passwordLength = window.prompt("Enter a character length between 8 and 128.");
+    if (passwordLength < 8 || passwordLength > 128) {
       window.alert("You did not enter a correct length. Please try again.");
       return generatePassword();
       }
@@ -68,13 +68,10 @@ function generatePassword() {
   //combines all characters that user wants to include
   var combinedCharacters = characterType + numericType + lowerCasePW + upperCasePW;
 
+passwordFinal = "";
+  for (var i=0; i < passwordLength; i++) {
 
-  passwordfinal = "";
- for (var i=0; i < passwordLength; i++) {
-// console.log(characterTypes[i]);
-//   var passwordfinal = Math.floor(Math.random()*passwordLength)
-
-passwordfinal = passwordfinal + combinedCharacters[Math.floor(Math.random() * Math.floor(combinedCharacters.length-1))];
+    passwordFinal = passwordFinal + combinedCharacters[Math.floor(Math.random() * Math.floor(combinedCharacters.length-1))];
 }
 return passwordfinal;
 
