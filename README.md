@@ -6,3 +6,6 @@ It will ask for the length of characters between 8 and 128 characters, lowercase
 # Screenshot
 The below shows results of the project.
 <img src ="./assets/Screenshot.png">
+
+# Link to deployed applicatoin
+https://christine-zhe.github.io/pw-creator/

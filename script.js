@@ -73,7 +73,7 @@ passwordFinal = "";
 
     passwordFinal = passwordFinal + combinedCharacters[Math.floor(Math.random() * Math.floor(combinedCharacters.length-1))];
 }
-return passwordfinal;
+return passwordFinal;
 
 }
 
